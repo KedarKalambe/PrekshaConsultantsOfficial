@@ -1,0 +1,241 @@
+body{
+  /*Setting the same styling in one line
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 15px;
+  line-height:1.5;
+   */
+  font: 15px/1.5 Arial,Helvetica,sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/*ALL GLOBAL ELEMNTS*/
+
+  /*While adding CSS to a "class" we use the "." sign whereas for "id" we use "#" sign*/
+.container{
+  width: 80%;  /*set it to % and not px for getting responsive*/
+  margin: auto;
+  overflow: hidden;
+  }
+
+  ul{
+      margin: 0;
+      padding: 0;
+    }
+
+ .collect_contact_info{
+   height: 40px;
+   margin-bottom: 20px;
+   align:center;
+   background: #6C52FF;
+   border: none;
+   cursor: pointer;
+   color: #ffffff;
+   padding-left: 60px;
+   padding-right: 60px;
+
+ }
+  /*ALL HEADER ELEMNTS*/
+  header{
+    background: #0c0c0c;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #6C52FF 3px solid;
+  }
+
+  header a{
+    color: #ffffff;
+    text-decoration:none; /*removes underline from links*/
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  header li{
+    float: left;
+    display:inline;
+    padding: 0 20px 0 20px /*top right bottom left is the order*/
+  }
+
+  header #branding{
+    float: left;
+  }
+
+ header #branding h1{
+   margin: 0;
+ }
+
+  header nav{
+    float: right;
+    margin-top: 10px;
+  }
+
+header .highlight, header .current a{
+  color: #6C52FF;
+  font-weight: bold;
+
+}
+
+/*what happens to the links when we hover mouse over it*/
+header a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*showcase*/
+#showcase{
+  min-height: 400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px; /* to move image on x and y axis we have 0 and -300px respectively*/
+  text-align: center;
+  color: #ffffff;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+#showcase p{
+  font-size: 23px;
+  text-align: center;
+}
+/*newsletter section css*/
+#newsletter{
+  padding: 15px;
+  color: #ffffff;
+  background-color: #0c0c0c;
+}
+
+#newsletter h1{
+  font-size: 18px;
+  float: left;
+  margin-top: 25px;
+}
+
+#newsletter form{
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter button a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/*removed input buttons
+#newsletter input[type="email"], #newsletter input[type="tel"] {
+  padding:4px;
+  height: 25px;
+  width: 150px;
+}
+*/
+
+/*boxes */
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 15px;
+}
+/*below is an example of applying css to a specific tag which is in a class...which is further inside an id*/
+#boxes .box img{
+width: 90px;
+}
+/*directly grabbing a specific tag*/
+
+footer{
+  padding:  5px;
+  margin-top: 5px;
+  color: #ffffff;
+  background: #6C52FF;
+  text-align:inherit;
+}
+
+.company_logo{
+  height: 50px;
+  width: 50px;
+  float: left;
+  padding-top: 2px;
+  padding-right: 5px;
+}
+
+/*Media queries*/
+@media(max-width:768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #boxes .box{
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+
+  #showcase h1{
+    margin-top: 100px;
+    font-size: 27px;
+    text-align: center;
+  }
+  #showcase p{
+    font-size: 20px;
+    text-align: center;
+  }
+  #newsletter button{
+    display: block;
+    width: 100%;
+    margin-right: 55px;
+  }
+  #newsletter h1{
+    font-size: 15px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+  header a{
+    color: #ffffff;
+    text-decoration:none; /*removes underline from links*/
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  header #branding h1{
+    font-size: 29px;
+  }
+  footer{
+    padding:  15px;
+    margin-top: 15px;
+    color: #ffffff;
+    background: #6C52FF;
+    text-align:left;
+
+  }
+  .company_logo{
+    height: 60px;
+    width: 60px;
+    float: left;
+    padding-bottom: 2px;
+    padding-right: 5px;
+  }
+  footer p{
+    margin-top: 20px;
+    font-size: 11px;
+  }
+  #boxes .box{
+    font-size: 15px;
+  }
+  #boxes .box p{
+    padding-right: 20px;
+  }
+  #boxes .box h3{
+    padding-right: 20px;
+  }
+}
